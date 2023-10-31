@@ -1,27 +1,31 @@
+# Duplicates default main branch to the old master branch
 
 name: Duplicates main to old master branch
 
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "copy-branch"
   copy-branch:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          ref: test  # main 브랜치를 체크아웃합니다.
-
-      - name: Configure Git
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git remote set-url origin "https://github-actions:${{ secrets.TEST_TOKEN }}@github.com/seongssu/test.git"
-      - name: Merge and Push
-        run: |
-          git merge origin/main
-          git push origin test
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it,
+    # but specifies master branch (old default).
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        ref: master
+        
+    - run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git merge origin/main
+        git push
