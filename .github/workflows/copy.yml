@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        ref: master
+        refs : heads/main
         
     - run: |
         git config user.name github-actions
