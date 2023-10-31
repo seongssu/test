@@ -15,6 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnGooglemaps.setOnClickListener {  }
-        binding.btnMiseya.setOnClickListener {  }
+        val x = 11
+        val y = 222
+        val z = 333
+        val f = 44444
+        val h = 5
+        val k = 6
+        val q = 7
     }
 }
