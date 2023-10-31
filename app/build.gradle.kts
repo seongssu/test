@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "kr.sparta.test"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "kr.sparta.test"
         minSdk = 31
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
