@@ -24,4 +24,4 @@ jobs:
       - name: Merge and Push
         run: |
           git merge origin/main
-          git push
+          git push origin test
