@@ -37,3 +37,4 @@ jobs:
         elif [[ $GITHUB_REF == "refs/heads/feat/budget" ]]; then
           git merge origin/feat/budget
           git push
+        fi
