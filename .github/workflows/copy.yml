@@ -19,6 +19,8 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git remote set-url origin "https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/seongssu/test.git"
+
 
       - name: Merge and Push
         run: |
