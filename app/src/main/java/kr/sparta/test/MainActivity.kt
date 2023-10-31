@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnGooglemaps.setOnClickListener {  }
         val x = 11
-        val y = 2
+        val y = 22
         val z = 3
         val f = 4
         val h = 5
