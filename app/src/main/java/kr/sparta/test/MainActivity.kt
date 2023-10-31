@@ -15,5 +15,6 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnGooglemaps.setOnClickListener {  }
+        val x = 1
     }
 }
