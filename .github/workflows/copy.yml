@@ -24,7 +24,7 @@ jobs:
 
       # Merge changes from origin/feat/home into the current branch
       - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name seongssu
+          git config user.email loveforggong@github.com
           git merge origin/feat/home
           git push
