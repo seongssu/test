@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnSharedpreference.setOnClickListener {
 
         }
-        binding.btnGooglemaps.setOnClickListener {  }
-        binding.btnMiseya.setOnClickListener {  }
+
     }
 }
