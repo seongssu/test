@@ -1,6 +1,6 @@
 # Duplicates default main branch to the old master branch
 
-name: Duplicates main to old master branch
+name: copy
 
 # Controls when the action will run. Triggers the workflow on push to the specified branch
 on:
@@ -23,8 +23,6 @@ jobs:
           fetch-depth: 0
 
       # Merge changes from origin/feat/home into the current branch
-      - run: |
-          git config user.name seongssu
-          git config user.email loveforggong@github.com
-          git merge origin/feat/home
+      - run: |         
+          git merge origin/test
           git push
