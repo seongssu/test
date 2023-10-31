@@ -51,12 +51,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
-
-      - name: Access MAPS_API_KEY
-        env:
-          APOD_API_KEY: ${{ secrets.MAPS_API_KEY }}
-        run: echo '${{ secrets.GOOGLE_SERVICES_JSON }}' > ./app/google-services.json
+          cache: gradle     
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
