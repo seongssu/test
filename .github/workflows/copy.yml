@@ -3,7 +3,7 @@ name: Duplicates main to old master branch
 on:
   push:
     branches:
-      - main
+      - feat/home
 
 jobs:
   copy-branch:
@@ -13,16 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          ref: main  # main 브랜치를 체크아웃합니다.
+          ref: test
 
       - name: Configure Git
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git remote set-url origin "https://github-actions:${{ secrets.TEST_TOKEN }}@github.com/seongssu/test.git"
 
 
       - name: Merge and Push
         run: |
-          git merge origin/main
-          git push
+          git merge feat/home
+          git push origin test
