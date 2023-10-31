@@ -14,8 +14,5 @@ class MainActivity : AppCompatActivity() {
         binding.btnSharedpreference.setOnClickListener {
 
         }
-        binding.btnGooglemaps.setOnClickListener {
-
-        }
     }
 }
