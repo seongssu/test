@@ -6,7 +6,10 @@ name: Duplicates main to old master branch
 # events but only for the main branch
 on:
   push:
-    branches: [ main ]
+    branches:
+      - feat/home
+      - feat/community
+      - feat/budget
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,7 +28,12 @@ jobs:
         ref: test
         
     - run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git merge origin/main
-        git push
+        if [[ $GITHUB_REF == "refs/heads/feat/home" ]]; then   
+          git merge origin/feat/home
+          git push
+        elif [[ $GITHUB_REF == "refs/heads/feat/community" ]]; then
+          git merge origin/feat/community
+          git push
+        elif [[ $GITHUB_REF == "refs/heads/feat/budget" ]]; then
+          git merge origin/feat/budget
+          git push
