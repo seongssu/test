@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val z = 333
         val f = 44444
         val h = 555555
-        val k = 6666
+        val k = 666666
         val q = 7
     }
 }
