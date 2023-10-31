@@ -15,6 +15,6 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnGooglemaps.setOnClickListener {  }
-        binding.btnMiseya.setOnClickListener {  }
+
     }
 }
